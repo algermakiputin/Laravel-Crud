@@ -5,21 +5,32 @@
 }
 .page-title {
 	background: #19254C;
-	padding: 10px 0;
+	padding: 15px 0;
 }
 .page-title h1 {
 	color: #fff;
 	font-size: 22px;
+  margin: 0;
 }
 main {
 	margin: 20px 0;
+}
+
+.navbar-right {
+  width: 300px;
+}
+
+.navbar-right .btn {
+  float: right;
 }
 
 .btn-outline-success:hover {
 	background-color: #E6E6FA;
 }
 
-.btn-outline-success:not(:disabled):not(.disabled).active, .btn-outline-success:not(:disabled):not(.disabled):active, .show>.btn-outline-success.dropdown-toggle {
+.btn-outline-success:not(:disabled):not(.disabled).active, 
+.btn-outline-success:not(:disabled):not(.disabled):active, 
+.show>.btn-outline-success.dropdown-toggle {
 	background-color: #E6E6FA;
 	outline: 0;
 }

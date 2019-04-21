@@ -13,6 +13,9 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
                     </li> 
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">My Profile </a>
+                    </li>
                 </ul>
                 <div class=" my-2 my-lg-0">
                     <form method="POST" action="{{ route('logout') }}">
@@ -54,7 +57,7 @@
                     @endif
                     <div class="col-md-12">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="search" placeholder="Search name">
+                            <input type="text" style="border-color: rgba(0,0,0,0.3);" class="form-control" name="search" placeholder="Search name">
                         </div>
                     </div>
                 </div>
@@ -91,7 +94,6 @@
                                         <div class="dropdown-menu">
                                             <a class="dropdown-item edit" data-id="{{ $user->id }}" href="#">Edit</a>
                                             <a class="dropdown-item delete" data-id="{{ $user->id }}" href="#">Delete</a>
-                                            <a class="dropdown-item" href="#">Profile</a> 
                                         </div>
                                     </div>
                                 </td>
@@ -157,11 +159,11 @@
                                 <legend>Account Information</legend>
                                <div class="form-group">
                                     <label>Account Name</label>
-                                  <input type="text" required="required" class="form-control" placeholder="Account Name" name="account_name">
+                                  <input type="text" readonly="readonly" required="required" class="form-control" placeholder="Account Name" name="account_name">
                                </div>
                                <div class="form-group">
                                     <label>Email</label>
-                                  <input type="email" required="required" class="form-control" placeholder="Email" name="email">
+                                  <input type="email" readonly="readonly" required="required" class="form-control" placeholder="Email" name="email">
                                </div> 
                            </fieldset>
                        </div>
