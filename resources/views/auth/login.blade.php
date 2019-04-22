@@ -7,7 +7,7 @@
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);width: 450px;">
         <div class="card card-signin my-5">
           <div class="card-body">
-            <h5 class="card-title text-center">Sign In</h5>
+            <h5 class="card-title text-center" style="color: #19254C">Sign In</h5>
             <form class="form-signin" method="POST" action="{{ route('login') }}">
                 @csrf
               <div class="form-label-group form-group">

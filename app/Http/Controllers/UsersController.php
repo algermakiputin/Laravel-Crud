@@ -11,7 +11,8 @@ class UsersController extends Controller
 {
     private $id = null;
 
-    public function store(Request $request, User $user, Persons $person) {
+    public function store(Request $request, User $user, Persons $person) 
+    {
     	$request->validate([
     		'first_name' => 'required',
     		'last_name' => 'required',
@@ -36,13 +37,15 @@ class UsersController extends Controller
     	
     }
 
-    public function get(Request $request) {
+    public function get(Request $request) 
+    {
         $this->id = $request->post('id');
         $request->session()->put('euid', $this->id);
         return response()->json(User::where('id',$this->id)->with('person')->first());
     }
 
-    public function update(Request $request, Persons $person) {
+    public function update(Request $request, Persons $person) 
+    {
         $uid = $request->session()->get('euid');
 
         if ($person->updatePerson($request->all(), $uid))
@@ -51,7 +54,8 @@ class UsersController extends Controller
         return "failed";
     }
 
-    public function destroy(Request $request, User $user, Persons $person) {
+    public function destroy(Request $request, User $user, Persons $person) 
+    {
         try {
             DB::transaction(function() use($request, $user,$person) {
                 $user = $user->find($request->post('id'));
@@ -62,6 +66,11 @@ class UsersController extends Controller
         } catch (Exception $e) {
             abort(404);
         }
+    }
+
+    public function profile()
+    {
+        return view('user.profile');
     }
 
 

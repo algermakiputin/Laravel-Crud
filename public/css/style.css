@@ -1,7 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 
 * {
-	font-family: "Nunito";
+	font-family: "Nunito", sans-serif ;
+}
+
+body {
+  font-size: 1em; 
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background: #f4f4f5;
 }
 .page-title {
 	background: #19254C;
@@ -24,6 +32,32 @@ main {
   float: right;
 }
 
+/*2nd Design*/
+.page-title {
+  background: #f4f4f5;
+}
+
+.page-title h1 {
+  color: #333;
+}
+
+.navbar-light {
+  background-color: #0292B7 !important;
+}
+
+.btn-primary {
+  background-color: #1AC8DB;
+  border-color: #1AC8DB;
+}
+
+.navbar-light .navbar-brand {
+  color: #fff;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: #fff;
+}
+
 .btn-outline-success:hover {
 	background-color: #E6E6FA;
 }
@@ -43,7 +77,8 @@ main {
 
 .section-header {
 	padding: 15px;
-	background-color : #E6E6FA;
+  background-color: #DEE2EC;
+ 
 	border-top-right-radius: 5px;
 	border-top-left-radius: 5px;
 }
@@ -64,7 +99,7 @@ main {
 .pull-right.btn {
 	margin-top: -5px;
 	width: 120px;
-	background: #fff;
+	background: #f4f4f5;
 	color: #333;
 	border:0;
 	padding: 6px;
